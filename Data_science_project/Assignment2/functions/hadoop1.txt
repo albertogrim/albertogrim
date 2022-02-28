@@ -1,0 +1,15 @@
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar \
+-files /input/functions/pm_mapper1.py,/input/functions/pm_reducer1.py \
+-mapper "python pm_mapper1.py" \
+-reducer "python pm_reducer1.py" \
+-input /input/acg-generated-logs/acg-final-log-10.tsv \
+-output /output/partial-pm
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar \
+-files /input/functions/pm_mapper2.py,/input/functions/pm_reducer2.py \
+-mapper "python pm_mapper2.py" \
+-reducer "python pm_reducer2.py" \
+-input /output/partial-pm/part-00000 \
+-output /output/log-10-pm
+
+hadoop fs -copyToLocal /output /usr/local/hadoop 

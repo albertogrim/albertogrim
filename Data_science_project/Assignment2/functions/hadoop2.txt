@@ -1,0 +1,9 @@
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar \
+-files /input/functions/pa_mapper.py,/input/functions/pa_reducer.py \
+-mapper "python pa_mapper.py" \
+-reducer "python pa_reducer.py" \
+-input /input/acg-generated-logs/acg-final-log-10.tsv \
+-output /output/log-10-pa
+
+hadoop fs -copyToLocal /output /usr/local/hadoop
+ 
