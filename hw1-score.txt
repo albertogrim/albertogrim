@@ -1,0 +1,9 @@
+"Score 10/10
+
+–Bitbucket OK. (no commits by Andarzian? Is Andarzian really contributing to the project?)
+–A good application overall
+–Good implementation of REST APIs and protection of your classes with filters
+–Good idea to insert a series of curl commands to test the application
+–Nice ER schema
+–In your db_schema.sql dump file, if you do not put a command \c feda_db after the CREATE DATABASE, the psql command will first create the database, and then, by default, still work on the default database postgres. Something to remember in the future.
+–Sequence Diagram a little hard to read, but good explanation in the report"
