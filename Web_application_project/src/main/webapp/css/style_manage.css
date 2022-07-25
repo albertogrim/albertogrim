@@ -1,0 +1,135 @@
+
+
+/*variables*/
+/*Animazione Titolo manage area*/
+.intro .company-name {
+  -webkit-animation: fade-names 1s linear forwards;
+          animation: fade-names 1s linear forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.intro .company-name img {
+  max-width: 90vw;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+@-webkit-keyframes fade-names {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade-names {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+p{line-height: 28px; color:#666; font-weight: 300;}
+
+.big-text{font-size: 70px;font-weight: 900;}
+.med-text{font-size: 40px;}
+.normal-text{font-size: 20px;}
+.small-text{font-size: 14px;}
+
+
+/* Navbar animation  ------*/
+
+.all-title-box{
+
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 52, 80, 0.9)), to(rgba(38, 60, 73, 0.7))), url("../img/all-bg-title.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(38, 60, 73, 0.7)), url('../img/all-bg-title.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+    
+
+
+ .all-title-box h2{
+     font-size: 90px;
+     font-weight: 600;
+     color: #ffffff;
+     padding-bottom: 40px;
+}
+
+
+.all-title-box h3{
+
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 40px;
+}
+
+
+
+
+/* ! Grid */
+.grid {
+    display: flex; 
+    max-width: 1350px; 
+
+    margin: auto;
+    bottom: 0;
+}
+
+
+
+/* ! Footer */
+.footer {
+    background: #010e30;
+    padding: 8% 0;
+    background-color:#333333;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
+/* ! Helpers */
+.tw {
+    color:#ffffff;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+

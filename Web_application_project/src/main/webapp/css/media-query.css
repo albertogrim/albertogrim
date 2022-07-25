@@ -1,0 +1,19 @@
+@media screen and (max-width:810px){
+    .menu-1,.menu,.profile-icon,.profile{display:none;}
+    .menu-bar{display: block;font-size:40px;margin-top:3%;}
+    .side-bar{width:30%;background-color:rgba(0, 0, 0, 0.237);display: block;overflow: hidden;margin-left:-2%;display:none;}
+    .pre-side-bar{display: block;}
+    .close{display: block;font-size:40px;}
+    .log-in{margin-left:2%;margin-top:-3%;height:25px;}
+    .large-right-sider,.large-left-sider{display:none;}
+    .for-small-devices,.hide-me-for-font{display:block;}
+    .show-two-hundred-small-page,.show-three-hundred-small-page,.show-four-hundred-small-page,.show-five-hundred-small-page,.show-six-hundred-small-page,#small-left-sider{display:none}
+
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        flex-wrap: wrap;
+    }
+}

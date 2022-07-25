@@ -1,0 +1,536 @@
+/*******************
+ Topbar
+*******************/
+.topbar {
+    position: relative;
+    z-index: 50;
+}
+.topbar .top-navbar {
+    min-height: 49px;
+    padding: 0px 15px 0 0;
+}
+.topbar .top-navbar .dropdown-toggle::after {
+    display: none;
+}
+.topbar .top-navbar .navbar-header {
+    line-height: 49px;
+    text-align: center;
+}
+.topbar .top-navbar .navbar-header .navbar-brand {
+    margin-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.topbar .top-navbar .navbar-header .navbar-brand b {
+    line-height: 49px;
+    display: inline-block;
+}
+.topbar .top-navbar .navbar-nav > .nav-item > .nav-link {
+    padding-left: .75rem;
+    padding-right: .75rem;
+    font-size: 19px;
+    line-height: 50px;
+}
+.topbar .top-navbar .navbar-nav > .nav-item.show {
+    background: rgba(0, 0, 0, 0.05);
+}
+.topbar .top-navbar .navbar-nav > .nav-item > .nav-link {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+/* Shrink logo on mini-sidebar */
+.mini-sidebar .top-navbar .navbar-header {
+    width: 60px;
+    text-align: center;
+}
+/*******************
+Main sidebar
+******************/
+.left-sidebar {
+    position: absolute;
+    width: 240px;
+    height: 100%;
+    top: 0px;
+    z-index: 20;
+    /*padding-top: 49px;*/
+    padding-top: 55px;
+    -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.fix-sidebar .left-sidebar {
+    position: fixed !important;
+}
+/*******************
+Sidebar navigation
+******************/
+.scroll-sidebar {
+    padding-bottom: 60px;
+}
+.collapse.in {
+    display: block;
+}
+.sidebar-nav {
+    padding: 15px;
+}
+.sidebar-nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+.sidebar-nav ul li {
+    list-style: none;
+}
+.sidebar-nav ul li a {
+    padding: 8px 35px 8px 15px;
+    display: block;
+    font-size: 15px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.sidebar-nav ul li a.active,
+.sidebar-nav ul li a:hover {
+    text-decoration:none; 
+}
+.sidebar-nav ul li a.active {
+    font-weight: 500;
+}
+.sidebar-nav ul li ul {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+.sidebar-nav ul li ul li a {
+    padding: 10px 35px 10px 15px;
+}
+.sidebar-nav ul li ul ul {
+    padding-left: 15px;
+}
+.sidebar-nav ul li.nav-small-cap {
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding: 14px 14px 14px 20px;
+    color: #263238;
+    font-weight: 500;
+}
+.sidebar-nav ul li.nav-devider {
+    height: 1px;
+    background: rgba(120, 130, 140, 0.13);
+    display: block;
+    margin: 20px 0;
+}
+.sidebar-nav > ul > li {
+    margin-bottom: 10px;
+}
+.sidebar-nav > ul > li.active > a {
+    font-weight: 500;
+}
+.sidebar-nav > ul > li > a i {
+    width: 27px;
+    height: 27px;
+    font-size: 21px;
+    line-height: 27px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sidebar-nav > ul > li > a .label {
+    float: right;
+    margin-top: 6px;
+}
+.sidebar-nav > ul > li > a.active {
+    font-weight: 400;
+}
+.sidebar-nav .has-arrow {
+    position: relative;
+}
+.sidebar-nav .has-arrow::after {
+    position: absolute;
+    content: '';
+    width: .55em;
+    height: .55em;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    right: 1em;
+    -webkit-transform: rotate(-45deg) translate(0, -50%);
+    -ms-transform: rotate(-45deg) translate(0, -50%);
+    -o-transform: rotate(-45deg) translate(0, -50%);
+    transform: rotate(-45deg) translate(0, -50%);
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+    top: 47%;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.sidebar-nav .active > .has-arrow::after,
+.sidebar-nav li > .has-arrow.active::after,
+.sidebar-nav .has-arrow[aria-expanded="true"]::after {
+    -webkit-transform: rotate(-135deg) translate(0, -50%);
+    -ms-transform: rotate(-135deg) translate(0, -50%);
+    -o-transform: rotate(-135deg) translate(0, -50%);
+    top: 45%;
+    width: .58em;
+    transform: rotate(-135deg) translate(0, -50%);
+}
+/****************
+When click on sidebar toggler and also for tablet
+*****************/
+@media (min-width: 768px) {
+    .mini-sidebar .sidebar-nav #sidebarnav li {
+        position: relative;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+        position: absolute;
+        left: 60px;
+        top: 45px;
+        width: 200px;
+        z-index: 1001;
+        display: none;
+        padding-left: 1px;
+    }
+    .mini-sidebar .sidebar-nav {
+        padding: 5px;
+    }
+    .mini-sidebar.fix-sidebar .left-sidebar {
+        /*position: absolute; */
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul {
+        height: auto !important;
+        overflow: auto;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul,
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul.collapse {
+        display: block;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li > a.has-arrow:after {
+        display: none;
+    }
+    .mini-sidebar .left-sidebar {
+        width: 60px;
+    }
+    
+    .mini-sidebar .scroll-sidebar {
+        padding-bottom: 0px;
+        position: absolute;
+    }
+    .mini-sidebar .hide-menu,
+    .mini-sidebar .nav-small-cap,
+    .mini-sidebar .sidebar-footer,
+    .mini-sidebar .user-profile .profile-text {
+        display: none;
+    }
+    .mini-sidebar .nav-devider {
+        width: 50px;
+    }
+    .mini-sidebar .sidebar-nav {
+        background: transparent;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li > a {
+        padding: 9px 15px;
+        width: 50px;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a {
+        width: 260px;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a .hide-menu {
+        display: inline;
+    }
+    
+    /*Only if Side Search*/
+    .mini-sidebar .sidebar-nav .side-search {
+        display: none;
+    }
+
+}
+@media (max-width: 767px) {
+    .mini-sidebar .left-sidebar {
+        position: fixed;
+    }
+    .mini-sidebar .left-sidebar,
+    .mini-sidebar .sidebar-footer {
+        left: -240px;
+    }
+    .mini-sidebar.show-sidebar .left-sidebar,
+    .mini-sidebar.show-sidebar .sidebar-footer {
+        left: 0px;
+    }
+}
+/*===========================
+Bootstrap 4 hack
+===========================*/
+.invisible {
+    visibility: hidden !important;
+}
+.hidden-xs-up {
+    display: none !important;
+}
+@media (max-width: 575px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+@media (min-width: 576px) {
+    .hidden-sm-up {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    .hidden-sm-down {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .hidden-md-up {
+        display: none !important;
+    }
+}
+@media (max-width: 991px) {
+    .hidden-md-down {
+        display: none !important;
+    }
+}
+@media (min-width: 992px) {
+    .hidden-lg-up {
+        display: none !important;
+    }
+}
+@media (max-width: 1199px) {
+    .hidden-lg-down {
+        display: none !important;
+    }
+}
+@media (min-width: 1200px) {
+    .hidden-xl-up {
+        display: none !important;
+    }
+}
+.hidden-xl-down {
+    display: none !important;
+}
+/*============================================================== 
+ For Laptop & above all (1650px) 
+ ============================================================== */
+@media (min-width: 1650px) {
+    .widget-app-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .campaign {
+        height: 365px !important;
+    }
+}
+/*============================================================== 
+ For Laptop & above all (1370px) 
+ ============================================================== */
+@media (max-width: 1370px) {
+    .widget-app-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+/*-- ============================================================== 
+ Small Desktop & above all (1024px) 
+ ============================================================== */
+@media (min-width: 1024px) {
+    .page-wrapper {
+        margin-left: 240px;
+    }
+    .footer {
+        left: 240px;
+    }
+}
+@media (max-width: 1023px) {
+    .page-wrapper {
+        margin-left: 60px;
+        -webkit-transition: 0.2s ease-in;
+        -o-transition: 0.2s ease-in;
+        transition: 0.2s ease-in;
+    }
+    .footer {
+        left: 60px;
+    }
+    .widget-app-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .inbox-center a {
+        width: 200px;
+    }
+}
+/*-- ============================================================== 
+ Ipad & above all(768px) 
+ ============================================================== */
+@media (min-width: 768px) {
+    .navbar-header {
+        width: 240px;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+    .navbar-header .navbar-brand {
+        padding-top: 0px;
+    }
+    .material-icon-list-demo .icons div {
+        width: 33%;
+        padding: 15px;
+        display: inline-block;
+        line-height: 40px;
+    }
+    .mini-sidebar .page-wrapper {
+        margin-left: 60px;
+    }
+    .mini-sidebar .footer {
+        left: 60px;
+    }
+    .flex-wrap {
+        -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+        -webkit-flex-wrap: nowrap !important;
+    }
+}
+/*-- ============================================================== 
+ Phone and below ipad(767px) 
+ ============================================================== */
+@media (max-width: 767px) {
+    /*Header*/
+    .topbar {
+        position: fixed;
+        width: 100%;
+    }
+    .topbar .top-navbar {
+        padding-right: 15px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-items: center;
+    }
+    .topbar .top-navbar .navbar-collapse {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+    }
+    .topbar .top-navbar .navbar-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .topbar .top-navbar .navbar-nav > .nav-item.show {
+        position: static;
+    }
+    .topbar .top-navbar .navbar-nav > .nav-item.show .dropdown-menu {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .topbar .top-navbar .navbar-nav > .nav-item > .nav-link {
+        padding-left: .50rem;
+        padding-right: .50rem;
+    }
+    .topbar .top-navbar .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    .mega-dropdown .dropdown-menu {
+        height: 480px;
+        overflow: auto;
+    }
+    /*Sidebar and wrapper*/
+    .mini-sidebar .page-wrapper {
+        margin-left: 0px;
+        padding-top: 49px;
+    }
+}
+
+/*=============================================================
+ Color scheme
+ ============================================================== */
+
+/* BODY */
+/* Page background */
+body{
+    background-color: #f7f7f7;
+}
+
+/* TOPBAR */
+/* Topbar shadow */
+.topbar {
+    -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/* Links in top navbar and toggler */
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+/* SIDEBAR */
+/* Sidebar background */
+.left-sidebar,
+.sidebar-nav {
+    background: #fff;
+}
+/* Sidebar items Color */
+.sidebar-nav ul li a,
+.sidebar-nav > ul > li > a i,
+.sidebar-nav .has-arrow::after {
+    color: #696969;
+}
+/* Sidebar items Hover color*/
+.sidebar-nav ul li a:hover,
+.sidebar-nav > ul > li > a:hover i,
+.sidebar-nav .has-arrow:hover::after {
+    color: #333333;
+}
+/* Sidebar items Active color*/
+.sidebar-nav ul li.active > a,
+.sidebar-nav > ul > li.active > a i,
+.sidebar-nav li.active > .has-arrow::after,
+.sidebar-nav ul li > a:focus,
+.sidebar-nav > ul > li > a:focus i,
+.sidebar-nav li > .has-arrow:focus::after {
+    color: #fff;
+}
+/* Sidebar Active background color and outline shadow */
+.sidebar-nav ul li.active > a,
+.sidebar-nav ul li > a:focus {
+    background-color: #333333;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* Sidebar submenú background color and Radius */
+.sidebar-nav li.active > ul{
+    -webkit-border-bottom-right-radius: 7px;
+    -webkit-border-bottom-left-radius: 7px;
+    -moz-border-radius-bottomright: 7px;
+    -moz-border-radius-bottomleft: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+
+    background-color: rgba(204, 204, 204, 0.2);
+}
+
+/* MINI SIDEBAR */
+@media (min-width: 768px) {
+    /* Background floating menu */
+    .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+        background: #fefefe;
+    }
+    /* Items Hover background color */
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a {
+        background: #333333;
+    }
+    /* Items color */
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a i,
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a {
+        color: #fff;
+    }
+}

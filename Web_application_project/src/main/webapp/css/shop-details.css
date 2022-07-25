@@ -1,0 +1,100 @@
+body{font-family: 'Inter', sans-serif;font-size: 16px;}
+a{text-decoration: none;}
+
+p{line-height: 28px; color:#666; font-weight: 300;}
+
+h1, h2, h3, h4, h5, p{color:#000; padding-bottom: 30px;}
+
+.big-text{font-size: 70px;font-weight: 900;}
+.med-text{font-size: 40px;}
+.normal-text{font-size: 20px;}
+.small-text{font-size: 14px;}
+.footer-text{line-height: 16px; color:#fff; font-size: 16px; }
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    display: flex;
+    max-width: 1350px;
+    background-color: #010e30;
+    opacity: 0.88;
+}
+
+.logo{z-index: 1}
+
+.menu{
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    width: 100%;
+    z-index: 0;
+}
+
+.menu li{display: inline-block;}
+.menu li a{color: #fff;padding: 15px;display: block;}
+
+.hamburger{display: none;}
+
+.button{padding: 18px 28px; background: #7FB3D5; color:#fff; display: inline-block;border-radius: 4px}
+
+@media (max-width: 768px) {
+
+    .cta{display: none;}
+
+    .menu{position: absolute; top:0; right:-100%;background: #000;height: 100vh;padding-top: 80px;}
+    .menu li{display: block;}
+    .menu li a{padding: 15px 30px;font-size: 20px;}
+
+    .menu--open{right:0%;}
+
+    .hamburger{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top:40px;
+        right:30px
+    }
+    .hamburger span{background: #fff;height: 3px;width: 100%;display: block;margin-bottom: 5px;}
+
+}
+
+body{
+    background-color: #ffffff !important;
+}
+
+button{width: 80px; height: 60px;  background: #7FB3D5; color:#fff; display: inline-block; border-radius: 8px;}
+
+.container {
+    padding: 10px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* ! Grid */
+
+.grid{display: flex; max-width: 1350px; padding: 0 30px;margin: 0 auto;}
+.grid .col{width: 100%;}
+
+@media (max-width: 768px) {
+    .grid{flex-wrap: wrap}
+}
+
+/* ! Helpers */
+
+.mt-1{margin-top: 50px;}
+.mt-2{margin-top: 100px;}
+.mt-3{margin-top: 150px;}
+.tw{color:#fff}
+
+/* Footer */
+
+.footer{
+    background: #010e30;
+    padding: 100px 0;
+    display: flex;
+}

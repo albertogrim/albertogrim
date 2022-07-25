@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<web-app id="TailorShopDEI" version="4.0" xmlns="http://java.sun.com/xml/ns/javaee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+	<display-name>TailorShopDEI</display-name>
+	<description></description>
+	<welcome-file-list>
+		<welcome-file>jsp/homepage.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>it.unipd.dei.webapp.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/jsp/shop.jsp</url-pattern>
+		<url-pattern>/jsp/custom-creation.jsp</url-pattern>
+		<url-pattern>/jsp/create-product.jsp</url-pattern>
+		<url-pattern>/jsp/book-appointment.jsp</url-pattern>
+	</filter-mapping>
+
+
+	<servlet>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.EmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CreateCustomer</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.CreateCustomerServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>OrderServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.OrderServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CustomProductServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.CustomProductServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProtectedUserServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.ProtectedUserServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProtectedOrderServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.ProtectedOrderServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RestDispatcherServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.RestDispatcherServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProtectedCustomProductServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.ProtectedCustomProductServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProtectedAppointmentServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.ProtectedAppointmentServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProtectedCustomerServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.ProtectedCustomerServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProtectedProductServlet</servlet-name>
+		<servlet-class>it.unipd.dei.webapp.servlet.ProtectedProductServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<url-pattern>/employee/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CreateCustomer</servlet-name>
+		<url-pattern>/customer/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OrderServlet</servlet-name>
+		<url-pattern>/order/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProtectedUserServlet</servlet-name>
+		<url-pattern>/adminData/user/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProtectedOrderServlet</servlet-name>
+		<url-pattern>/adminData/order/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CustomProductServlet</servlet-name>
+		<url-pattern>/customProduct/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RestDispatcherServlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProtectedCustomProductServlet</servlet-name>
+		<url-pattern>/adminData/customProduct/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProtectedAppointmentServlet</servlet-name>
+		<url-pattern>/adminData/appointment/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProtectedCustomerServlet</servlet-name>
+		<url-pattern>/adminData/customer/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProtectedProductServlet</servlet-name>
+		<url-pattern>/adminData/product/*</url-pattern>
+	</servlet-mapping>
+
+
+
+	<resource-ref>
+		<description>Connection pool to the database</description>
+		<res-ref-name>jdbc/TailorShop</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+</web-app>

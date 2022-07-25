@@ -1,0 +1,22 @@
+# IntelliJ Idea
+*.iml
+*/.idea/
+.idea/
+out/
+
+# Java
+*.class
+*/target/
+*/javadoc/
+*/log/
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+*.tar.gz
+
+# OSX
+.DS_store
